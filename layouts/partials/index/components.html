@@ -3,7 +3,7 @@
 {{ $active := where $incidents "Params.resolved" "=" false }}
 {{ $systems := .Site.Params.systems }}
 {{ $categories := .Site.Params.categories }}
-
+   
 <div class="categories">
   {{ range $category := $categories }}
     <div class="category {{ if $category.closed }}category--closed{{ else }}category--open{{ end }}{{ if not $category.untitled }} category--titled{{ end }}" id="{{ $category.name | urlize }}">
