@@ -1,0 +1,165 @@
+{{/* Shareline main status summary, based on common public status-page patterns. */}}
+{{ $incidents := where .Site.RegularPages "Params.section" "issue" }}
+{{ $active := where $incidents "Params.resolved" "=" false }}
+{{ $rank := 0 }}
+{{ $statusKey := "operational" }}
+
+{{ range $issue := $active }}
+  {{ $candidate := "" }}
+  {{ with $issue.Params.componentStatus }}
+    {{ $candidate = lower (replace . "-" "_") }}
+  {{ else }}
+    {{ if eq $issue.Params.severity "down" }}
+      {{ $candidate = "major_outage" }}
+    {{ else if eq $issue.Params.severity "disrupted" }}
+      {{ $candidate = "partial_outage" }}
+    {{ else if eq $issue.Params.severity "notice" }}
+      {{ $candidate = "degraded_performance" }}
+    {{ end }}
+  {{ end }}
+
+  {{ $candidateRank := 0 }}
+  {{ if eq $candidate "degraded_performance" }}{{ $candidateRank = 2 }}{{ end }}
+  {{ if eq $candidate "under_maintenance" }}{{ $candidateRank = 3 }}{{ end }}
+  {{ if eq $candidate "partial_outage" }}{{ $candidateRank = 4 }}{{ end }}
+  {{ if eq $candidate "major_outage" }}{{ $candidateRank = 5 }}{{ end }}
+
+  {{ if gt $candidateRank $rank }}
+    {{ $rank = $candidateRank }}
+    {{ $statusKey = $candidate }}
+  {{ end }}
+{{ end }}
+
+{{ $headline := "All Systems Operational" }}
+{{ $supportingText := "All Shareline components are operating normally." }}
+{{ if eq $statusKey "degraded_performance" }}
+  {{ $headline = "Some Systems Have Degraded Performance" }}
+  {{ $supportingText = "One or more Shareline components are experiencing minor issues." }}
+{{ else if eq $statusKey "under_maintenance" }}
+  {{ $headline = "Scheduled Maintenance Is Underway" }}
+  {{ $supportingText = "One or more Shareline components are currently under maintenance." }}
+{{ else if eq $statusKey "partial_outage" }}
+  {{ $headline = "Some Systems Have a Partial Outage" }}
+  {{ $supportingText = "Some Shareline functionality is currently unavailable." }}
+{{ else if eq $statusKey "major_outage" }}
+  {{ $headline = "Some Systems Have a Major Outage" }}
+  {{ $supportingText = "One or more critical Shareline components are currently unavailable." }}
+{{ end }}
+
+<section class="main-status main-status--{{ $statusKey }}" data-component-status="{{ $statusKey }}" aria-labelledby="main-status-title">
+  <div class="main-status__icon" aria-hidden="true">
+    {{ if eq $statusKey "operational" }}
+      <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
+    {{ else if eq $statusKey "under_maintenance" }}
+      <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5-5l2.2 2.2-8.4 8.4a2.1 2.1 0 0 0 3 3l8.4-8.4 2.2 2.2a4 4 0 0 0-2.4-2.4Z"></path><path d="m16 16 4 4"></path></svg>
+    {{ else }}
+      <svg viewBox="0 0 24 24"><path d="M12 9v4"></path><path d="M12 17h.01"></path><path d="M10.3 3.7 2.4 17.4A2 2 0 0 0 4.1 20h15.8a2 2 0 0 0 1.7-2.6L13.7 3.7a2 2 0 0 0-3.4 0Z"></path></svg>
+    {{ end }}
+  </div>
+
+  <div class="main-status__content">
+    <h2 id="main-status-title">{{ $headline }}</h2>
+    <p>{{ $supportingText }}</p>
+    <div class="main-status__meta">
+      <span>Last updated <time datetime="{{ now.Format "2006-01-02T15:04:05Z07:00" }}">{{ now.Format "Jan 2, 2006 at 3:04 PM MST" }}</time></span>
+      {{ if $active }}
+        <span>{{ len $active }} active {{ if eq (len $active) 1 }}incident{{ else }}incidents{{ end }}</span>
+      {{ else }}
+        <span>No active incidents</span>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="main-status__actions">
+    {{ if $active }}
+      <a href="{{ "issues/" | relURL }}">View active incidents</a>
+    {{ else }}
+      <a href="{{ "issues/" | relURL }}">View incident history</a>
+    {{ end }}
+  </div>
+</section>
+
+<style>
+  .main-status {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid currentColor;
+    border-radius: 8px;
+    background: var(--sl-surface, #fff);
+    color: var(--sl-green, #34c759);
+  }
+
+  .main-status--degraded_performance { color: var(--sl-yellow, #ff9f0a); }
+  .main-status--under_maintenance { color: var(--sl-blue, #0a84ff); }
+  .main-status--partial_outage { color: var(--sl-orange, #ff7a00); }
+  .main-status--major_outage { color: var(--sl-red, #ff3b30); }
+
+  .main-status__icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .main-status__icon svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .main-status__content h2 {
+    margin: 0;
+    color: var(--sl-text, #1f2933);
+    font-size: 20px;
+    letter-spacing: -.01em;
+  }
+
+  .main-status__content > p {
+    margin: 4px 0 0;
+    color: var(--sl-secondary, #66717e);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .main-status__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 16px;
+    margin-top: 9px;
+    color: var(--sl-secondary, #66717e);
+    font-size: 12px;
+  }
+
+  .main-status__actions a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 13px;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    color: currentColor;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .main-status__actions a:hover { background: color-mix(in srgb, currentColor 8%, transparent); }
+
+
+  @media (max-width: 680px) {
+    .main-status { grid-template-columns: auto minmax(0, 1fr); align-items: start; }
+    .main-status__actions { grid-column: 1 / -1; }
+    .main-status__actions a { width: 100%; justify-content: center; }
+    .main-status-incident__top { flex-direction: column; gap: 8px; }
+  }
+</style>
