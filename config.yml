@@ -6,9 +6,10 @@
 
 title: Shareline System Status
 buildFuture: true
+timeZone: America/Detroit
 languageCode: en
 defaultContentLanguage: en
-baseURL: https://rkritzar39.github.io/shareline-status/
+baseURL: "https://rkritzar39.github.io/shareline-status/"
 enableGitInfo: true
 params:
   categories:
@@ -331,9 +332,9 @@ params:
   - name: Domain and Content Delivery Services
     description: Represents future DNS, certificates, public domains, media delivery, and CDN infrastructure.
     category: Third-Party Services
-  dateFormat: January 2, 2006 at 3:04 PM UTC
-  shortDateFormat: 3:04 PM UTC - Jan 2
-  useRelativeTime: true
+  dateFormat: January 2, 2006 at 3:04 PM MST
+  shortDateFormat: Jan 2 at 3:04 PM MST
+  useRelativeTime: false
   skipSeconds: true
   enableLastMod: true
   useLargeHeaderDesign: true
@@ -342,19 +343,21 @@ params:
   disableDarkMode: false
   useLogo: true
   logo: logo.png
-  description: Shareline is currently in prototype development. Operational status indicates that a feature works in the current
-    local prototype environment. Some features do not yet include cloud synchronization, public hosting, cross-device delivery,
-    or production backend infrastructure. The iOS prototype is currently more complete than the Android prototype.
+  description: >-
+    Shareline is currently in prototype development. Operational status indicates that a feature works in the current local prototype environment. Some features do not yet include cloud synchronization, public hosting, cross-device delivery, or production backend infrastructure. The iOS prototype is currently more complete than the Android prototype.
   disableComplexCalculations: false
   incidentPostsPerPage: 10
-  brand: '#1162DC'
-  ok: '#34C759'
-  disrupted: '#FF9F0A'
-  down: '#FF3B30'
-  notice: '#0A84FF'
+  brand: "#1162DC"
+  ok: "#34C759"
+  disrupted: "#FF7A00"
+  down: "#FF3B30"
+  notice: "#FFB020"
+  degradedPerformance: "#FFB020"
+  partialOutage: "#FF7A00"
+  majorOutage: "#FF3B30"
+  underMaintenance: "#0A84FF"
   alwaysKeepBrandColor: true
   headerTextColor: white
-  googleAnalytics: UA-00000000-1
 theme: cstate
 preserveTaxonomyNames: true
 taxonomies:
