@@ -1,5 +1,5 @@
 ---
-title: "Some prototype services have limited functionality"
+title: "Prototype Services Partial Outage"
 date: 2026-08-14 21:45:00
 resolved: false
 severity: disrupted
@@ -13,8 +13,10 @@ affected:
 section: issue
 ---
 
-*Limited functionality*
+*Partial Outage*
 
-The affected prototype features include working local interfaces or partial on-device behavior, but their complete online workflows are not available.
+The affected Shareline prototype components remain partially available through local interfaces and on-device functionality. However, their complete online and cross-device workflows are currently unavailable.
 
-Remote recovery, production account lifecycle processing, protected verification review, server-side media processing, live Link Bio submissions, and cross-device Cork Board synchronization require future infrastructure.
+Current limitations affect remote account recovery, production account lifecycle processing, protected verification review, server-side media processing, live Link Bio form submissions and subscriber processing, and cross-device Cork Board synchronization.
+
+Development remains active while the required backend infrastructure and complete service workflows are implemented.
