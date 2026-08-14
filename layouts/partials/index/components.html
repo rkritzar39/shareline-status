@@ -152,3 +152,118 @@
     </div>
   {{ end }}
 </div>
+
+
+<style>
+  /* ================================================== */
+  /* Statuspage-Style Component Status Colors           */
+  /* ================================================== */
+
+  .component-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .component-status::before {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+    content: "";
+    flex: 0 0 auto;
+  }
+
+  /* Operational */
+
+  .component[data-component-status="operational"] .component-status {
+    color: #34c759;
+  }
+
+  /* Degraded Performance */
+
+  .component[data-component-status="degraded_performance"] .component-status {
+    color: #ff9f0a;
+  }
+
+  /* Partial Outage */
+
+  .component[data-component-status="partial_outage"] .component-status {
+    color: #ff7a00;
+  }
+
+  /* Major Outage */
+
+  .component[data-component-status="major_outage"] .component-status {
+    color: #ff3b30;
+  }
+
+  /* Under Maintenance */
+
+  .component[data-component-status="under_maintenance"] .component-status {
+    color: #0a84ff;
+  }
+
+  /* ================================================== */
+  /* Category Status Colors                             */
+  /* ================================================== */
+
+  .category-status {
+    float: right;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 600;
+  }
+
+  .category-status::before {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+    content: "";
+    flex: 0 0 auto;
+  }
+
+  .category__head[data-component-status="operational"] .category-status {
+    color: #34c759;
+  }
+
+  .category__head[data-component-status="degraded_performance"] .category-status {
+    color: #ff9f0a;
+  }
+
+  .category__head[data-component-status="partial_outage"] .category-status {
+    color: #ff7a00;
+  }
+
+  .category__head[data-component-status="major_outage"] .category-status {
+    color: #ff3b30;
+  }
+
+  .category__head[data-component-status="under_maintenance"] .category-status {
+    color: #0a84ff;
+  }
+
+  /* ================================================== */
+  /* Mobile Layout                                     */
+  /* ================================================== */
+
+  @media (max-width: 640px) {
+    .component {
+      align-items: flex-start;
+    }
+
+    .component-status {
+      margin-left: 8px;
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .category-status {
+      font-size: 13px;
+    }
+  }
+</style>
