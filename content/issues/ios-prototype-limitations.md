@@ -1,5 +1,5 @@
 ---
-title: "Some iOS prototype features remain incomplete"
+title: "iOS Prototype Partial Outage"
 date: 2026-08-14 21:35:00
 resolved: false
 severity: disrupted
@@ -13,10 +13,10 @@ affected:
 section: issue
 ---
 
-*Known limitations*
+*Partial Outage*
 
-The primary Shareline iOS prototype experiences are available, but some features and settings remain incomplete.
+The primary Shareline iOS prototype experiences remain available. However, some features and settings are currently incomplete or unavailable.
 
-Known limitations include Home-feed comment functionality, selected notification settings, some privacy and visibility controls, filtered interaction features, and moderation workflows.
+Known limitations affect Home Feed comments, selected notification settings, privacy and content-visibility controls, filtered interactions, and reporting or enforcement workflows.
 
-The iOS prototype remains under active development.
+The iOS prototype remains under active development while the affected components are completed and tested.
