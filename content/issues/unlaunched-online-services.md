@@ -1,8 +1,8 @@
 ---
-title: "Online infrastructure has not launched"
+title: "Online Infrastructure Major Outage"
 date: 2026-08-14 21:40:00
 resolved: false
-severity: disrupted
+severity: down
 affected:
   - "Real-Time Services"
   - "Email and Phone Verification"
@@ -18,8 +18,10 @@ affected:
 section: issue
 ---
 
-*Service not started*
+*Major Outage*
 
-Shareline is currently in prototype development and does not yet have connected production infrastructure for these services.
+The affected Shareline components are currently unavailable because their production infrastructure has not launched.
 
-The affected components may have local prototype interfaces, but cloud synchronization, cross-device delivery, public hosting, remote notifications, and production backend functionality have not launched.
+Some affected components may include local prototype interfaces or on-device functionality. However, cloud synchronization, cross-device delivery, public hosting, remote message delivery, remote notifications, transactional email, and production backend services are not currently available.
+
+This status represents planned infrastructure that remains under development, not an unexpected interruption to a previously launched production service.
