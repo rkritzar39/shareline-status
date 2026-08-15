@@ -20,7 +20,7 @@ params:
     description: Account creation, authentication, sessions, recovery, and account management.
     closed: true
   - name: Profiles and Social Graph
-    description: Profiles, profile media, relationships, follow requests, and verification.
+    description: Profiles, profile media, Profile Reels, relationships, follow requests, and verification.
     closed: true
   - name: Home Feed
     description: Home feed availability, feed modes, refresh, and recommendations.
