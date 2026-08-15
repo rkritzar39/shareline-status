@@ -9,7 +9,7 @@ buildFuture: true
 timeZone: America/Detroit
 languageCode: en
 defaultContentLanguage: en
-baseURL: "https://status.busarmydude.org/"
+baseURL: "https://rkritzar39.github.io/"
 enableGitInfo: true
 params:
   categories:
