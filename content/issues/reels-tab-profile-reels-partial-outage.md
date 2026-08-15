@@ -9,10 +9,10 @@ affected:
   - "Reels Tab"
   - "Profile Reels"
   - "Profile Media"
-  - "Reel Publishing"
-  - "Reel Interactions"
-  - "Reel Discovery"
-  - "Creator Tools"
+  - "Reels Publishing"
+  - "Reels Interactions"
+  - "Reels Discovery"
+  - "Reels Creator Tools"
 section: "issue"
 ---
 
