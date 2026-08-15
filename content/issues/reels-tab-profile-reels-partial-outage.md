@@ -1,22 +1,19 @@
 ---
-
 title: "Reels Tab and Profile Reels Partial Outage"
-date: 2026-08-15 17:25:00
+date: "2026-08-15 17:25:00"
 resolved: false
-severity: disrupted
-componentStatus: partial_outage
-incidentStatus: identified
+severity: "disrupted"
+componentStatus: "partial_outage"
+incidentStatus: "identified"
 affected:
-
-* "Reels Tab"
-* "Profile Reels"
-* "Profile Media"
-* "Reel Publishing"
-* "Reel Interactions"
-* "Reel Discovery"
-* "Creator Tools"
-  section: issue
-
+  - "Reels Tab"
+  - "Profile Reels"
+  - "Profile Media"
+  - "Reel Publishing"
+  - "Reel Interactions"
+  - "Reel Discovery"
+  - "Creator Tools"
+section: "issue"
 ---
 
 The Reels Tab and Profile Reels experiences are currently operating with a partial outage.
