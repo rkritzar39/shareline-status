@@ -1,30 +1,32 @@
 ---
-title: "Reels and Profile Media Fully Operational"
+title: "Reels and Profile Verification Operational"
 date: 2026-08-15T17:10:51-04:00
 resolved: true
-severity: resolved
+severity: disrupted
 componentStatus: operational
 incidentStatus: resolved
 affected:
   - "Reels Feed"
   - "Profile Media"
+  - "Profile Verification"
   - "Reels Publishing"
   - "Reels Interactions"
   - "Reels Discovery"
   - "Reels Creator Tools"
 section: issue
 ---
+
 <br>
 
 ## Resolved
 
 <br>
 
-All Shareline Reels experiences and Profile Media are currently **Operational**.
+All Shareline Reels features, Profile Media, and Profile Verification are currently **Operational**.
 
 <br>
 
-The Reels Feed, Profile Reels, publishing workflows, interactions, discovery features, and creator tools are functioning as expected within the current Shareline prototype.
+The previously reported disruption is no longer affecting these components. Supported functionality is working as expected within the current Shareline prototype.
 
 <br>
 
@@ -38,6 +40,7 @@ The following components are operational:
 
 - **Reels Feed**
 - **Profile Media**
+- **Profile Verification**
 - **Reels Publishing**
 - **Reels Interactions**
 - **Reels Discovery**
@@ -53,7 +56,7 @@ The Reels Feed is operational.
 
 <br>
 
-Users can open the Reels Tab, navigate between supported Reels, use available feed modes, and view Reel media.
+Users can open the Reels Tab, view supported Reel media, navigate between Reels, and use the available feed controls.
 
 <br>
 
@@ -66,6 +69,18 @@ Profile Media is operational.
 <br>
 
 Users can access Profile Reels, view available Reel media from profiles, and navigate through supported profile-based Reel experiences.
+
+<br>
+
+## Profile Verification
+
+<br>
+
+Profile Verification is operational.
+
+<br>
+
+Verified users display the Shareline verified badge from the app’s asset catalog. Verification status and supported verification interfaces are functioning as expected.
 
 <br>
 
@@ -85,11 +100,7 @@ Supported Reel creation, publishing, and content-management workflows are functi
 
 <br>
 
-Reels Interactions are operational.
-
-<br>
-
-Supported Reel actions are functioning, including:
+Reels Interactions are operational, including supported:
 
 <br>
 
@@ -99,7 +110,7 @@ Supported Reel actions are functioning, including:
 - Reposts
 - Sharing
 - Reports
-- Other supported Reel actions
+- Other Reel actions
 
 <br>
 
@@ -111,7 +122,7 @@ Reels Discovery is operational.
 
 <br>
 
-Supported discovery interfaces, feed modes, recommendations, and Reel navigation features are functioning.
+Supported discovery interfaces, Reel navigation features, recommendations, and feed modes are functioning.
 
 <br>
 
@@ -131,8 +142,8 @@ Supported creator interfaces and Reel-management controls are functioning.
 
 <br>
 
-The incident has been resolved. No active maintenance, disruption, or outage currently affects the Reels Tab or Profile Media.
+The incident has been resolved.
 
 <br>
 
-Shareline will continue monitoring these components and testing supported behavior on both iOS and Android.
+No active outage, disruption, or maintenance currently affects the listed components. Shareline will continue monitoring and testing these experiences on iOS and Android.
