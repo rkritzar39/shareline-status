@@ -1,49 +1,30 @@
 ---
-title: "Reels Feed Under Maintenance"
+title: "Reels and Profile Media Fully Operational"
 date: 2026-08-15T17:10:51-04:00
-resolved: false
-severity: maintenance
-componentStatus: under_maintenance
-incidentStatus: identified
+resolved: true
+severity: resolved
+componentStatus: operational
+incidentStatus: resolved
 affected:
   - "Reels Feed"
+  - "Profile Media"
+  - "Reels Publishing"
+  - "Reels Interactions"
+  - "Reels Discovery"
+  - "Reels Creator Tools"
 section: issue
 ---
 <br>
 
-## Identified
+## Resolved
 
 <br>
 
-The Shareline Reels Feed is currently **Under Maintenance**.
+All Shareline Reels experiences and Profile Media are currently **Operational**.
 
 <br>
 
-Maintenance is focused specifically on the feed experience within the Reels Tab. Other Reel-related components remain operational, including Profile Media, Reels Publishing, Reels Interactions, Reels Discovery, and Reels Creator Tools.
-
-<br>
-
-Development and testing remain active while maintenance is completed for the Reels Feed.
-
-<br>
-
-## Current Impact
-
-<br>
-
-The Reels Feed may be temporarily unavailable, incomplete, or behave unexpectedly while maintenance is underway.
-
-<br>
-
-Users may experience:
-
-<br>
-
-- Temporary interruptions when opening or navigating the Reels Feed.
-- Incomplete or unavailable Reel feed results.
-- Loading delays within the Reels Tab.
-- Temporary limitations when moving between supported feed modes.
-- Changes to locally available Reel presentation while maintenance is in progress.
+The Reels Feed, Profile Reels, publishing workflows, interactions, discovery features, and creator tools are functioning as expected within the current Shareline prototype.
 
 <br>
 
@@ -51,15 +32,28 @@ Users may experience:
 
 <br>
 
-The following components are currently operational:
+The following components are operational:
 
 <br>
 
+- **Reels Feed**
 - **Profile Media**
 - **Reels Publishing**
 - **Reels Interactions**
 - **Reels Discovery**
 - **Reels Creator Tools**
+
+<br>
+
+## Reels Feed
+
+<br>
+
+The Reels Feed is operational.
+
+<br>
+
+Users can open the Reels Tab, navigate between supported Reels, use available feed modes, and view Reel media.
 
 <br>
 
@@ -71,7 +65,7 @@ Profile Media is operational.
 
 <br>
 
-Users can access supported Profile Reels, view available Reel media from profiles, and navigate through supported profile-based Reel experiences.
+Users can access Profile Reels, view available Reel media from profiles, and navigate through supported profile-based Reel experiences.
 
 <br>
 
@@ -83,7 +77,7 @@ Reels Publishing is operational.
 
 <br>
 
-Supported Reel creation, publishing, and local content-management workflows remain available.
+Supported Reel creation, publishing, and content-management workflows are functioning.
 
 <br>
 
@@ -95,7 +89,7 @@ Reels Interactions are operational.
 
 <br>
 
-Supported Reel actions remain available, including:
+Supported Reel actions are functioning, including:
 
 <br>
 
@@ -117,7 +111,7 @@ Reels Discovery is operational.
 
 <br>
 
-Supported discovery interfaces, feed modes, recommendations, and Reel navigation features remain available outside the Reels Feed maintenance impact described above.
+Supported discovery interfaces, feed modes, recommendations, and Reel navigation features are functioning.
 
 <br>
 
@@ -129,32 +123,16 @@ Reels Creator Tools are operational.
 
 <br>
 
-Supported creator interfaces and Reel-management controls remain available.
+Supported creator interfaces and Reel-management controls are functioning.
 
 <br>
 
-## Next Steps
+## Resolution
 
 <br>
 
-Maintenance will continue on the Reels Feed.
+The incident has been resolved. No active maintenance, disruption, or outage currently affects the Reels Tab or Profile Media.
 
 <br>
 
-This incident will remain open until the Reels Feed has been:
-
-<br>
-
-1. Updated.
-2. Tested for supported feed behavior.
-3. Verified within the Reels Tab.
-4. Checked for compatibility with Profile Reels and other operational Reel components.
-5. Verified on both iOS and Android.
-
-<br>
-
-Profile Media, Reels Publishing, Reels Interactions, Reels Discovery, and Reels Creator Tools do not require restoration because they are currently operational.
-
-<br>
-
-No estimated completion time is currently available.
+Shareline will continue monitoring these components and testing supported behavior on both iOS and Android.
