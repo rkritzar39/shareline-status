@@ -1,65 +1,103 @@
 ---
-title: "Reels Tab and Profile Reels Partial Outage"
+title: "Reels Feed Under Maintenance"
 date: 2026-08-15T17:10:51-04:00
 resolved: false
-severity: disrupted
-componentStatus: partial_outage
+severity: maintenance
+componentStatus: under_maintenance
 incidentStatus: identified
 affected:
   - "Reels Feed"
-  - "Profile Media"
-  - "Reels Publishing"
-  - "Reels Interactions"
-  - "Reels Discovery"
-  - "Reels Creator Tools"
 section: issue
 ---
+<br>
 
 ## Identified
 
-The Shareline Reels Tab and Profile Reels experiences are currently operating with a **Partial Outage**.
+<br>
 
-Local and on-device Reel functionality remains available, including supported playback, navigation, presentation, interactions, and creator interfaces. However, the complete online and cross-device services required for a fully connected Reel experience have not yet been implemented.
+The Shareline Reels Feed is currently **Under Maintenance**.
 
-The missing infrastructure and workflow requirements have been identified. Development remains active across Reel media, publishing, interactions, discovery, and creator tools.
+<br>
+
+Maintenance is focused specifically on the feed experience within the Reels Tab. Other Reel-related components remain operational, including Profile Media, Reels Publishing, Reels Interactions, Reels Discovery, and Reels Creator Tools.
+
+<br>
+
+Development and testing remain active while maintenance is completed for the Reels Feed.
+
+<br>
 
 ## Current Impact
 
-Users can continue to:
+<br>
 
-- Open the Reels Tab.
-- Access Profile Reels.
-- View locally available Reel media.
-- Navigate between supported Reels.
-- Use supported local interaction controls.
-- Access available creator interfaces.
-- Manage locally stored Reel information.
+The Reels Feed may be temporarily unavailable, incomplete, or behave unexpectedly while maintenance is underway.
 
-Functionality that depends on production infrastructure may be unavailable or incomplete, including:
+<br>
 
-- Cross-device Reel synchronization.
-- Remote media storage and delivery.
-- Online Reel publishing.
-- Persistent interactions between actual accounts.
-- Connected recommendations and discovery.
-- Account-level creator workflows.
-- Reliable availability across multiple devices.
+Users may experience:
+
+<br>
+
+- Temporary interruptions when opening or navigating the Reels Feed.
+- Incomplete or unavailable Reel feed results.
+- Loading delays within the Reels Tab.
+- Temporary limitations when moving between supported feed modes.
+- Changes to locally available Reel presentation while maintenance is in progress.
+
+<br>
+
+## Operational Components
+
+<br>
+
+The following components are currently operational:
+
+<br>
+
+- **Profile Media**
+- **Reels Publishing**
+- **Reels Interactions**
+- **Reels Discovery**
+- **Reels Creator Tools**
+
+<br>
 
 ## Profile Media
 
-Profile media functionality related to Reels is partially available.
+<br>
 
-Locally stored Reel media and profile-based Reel viewing can function in the current prototype. Remote media storage, cross-device synchronization, production media delivery, and persistent availability between devices have not yet launched.
+Profile Media is operational.
 
-## Reel Publishing
+<br>
 
-The Reel publishing experience remains under active development.
+Users can access supported Profile Reels, view available Reel media from profiles, and navigate through supported profile-based Reel experiences.
 
-Local publishing interfaces and portions of the prototype publishing workflow may be available. The complete production publishing pipeline, remote upload process, server-side media processing, and online delivery workflow are not yet available.
+<br>
 
-## Reel Interactions
+## Reels Publishing
 
-Supported local Reel interactions may be available, including portions of:
+<br>
+
+Reels Publishing is operational.
+
+<br>
+
+Supported Reel creation, publishing, and local content-management workflows remain available.
+
+<br>
+
+## Reels Interactions
+
+<br>
+
+Reels Interactions are operational.
+
+<br>
+
+Supported Reel actions remain available, including:
+
+<br>
 
 - Likes
 - Comments and replies
@@ -67,32 +105,56 @@ Supported local Reel interactions may be available, including portions of:
 - Reposts
 - Sharing
 - Reports
-- Other Reel actions
+- Other supported Reel actions
 
-Online persistence, synchronization between actual accounts, cross-device updates, and complete production interaction services remain unavailable or incomplete.
+<br>
 
-## Reel Discovery
+## Reels Discovery
 
-The Reels Tab, supported feed modes, and local discovery interfaces remain available in the prototype.
+<br>
 
-The production infrastructure required for connected recommendations, account-based discovery, remote feed delivery, trending information, and continuously updated discovery results has not yet launched.
+Reels Discovery is operational.
 
-## Reel Creator Tools
+<br>
 
-Supported creator interfaces and local Reel-management controls remain partially available.
+Supported discovery interfaces, feed modes, recommendations, and Reel navigation features remain available outside the Reels Feed maintenance impact described above.
 
-Complete connected creator workflows are not yet available, including remote media management, persistent account-level updates, production analytics, and synchronization of creator changes across devices.
+<br>
+
+## Reels Creator Tools
+
+<br>
+
+Reels Creator Tools are operational.
+
+<br>
+
+Supported creator interfaces and Reel-management controls remain available.
+
+<br>
 
 ## Next Steps
 
-Development will continue across the affected components.
+<br>
 
-This incident will remain open until the required functionality has been:
+Maintenance will continue on the Reels Feed.
 
-1. Implemented.
-2. Connected to supported production infrastructure.
-3. Integrated with the Reels Tab and Profile Reels.
-4. Tested between actual accounts and devices.
-5. Verified for both iOS and Android.
+<br>
 
-No resolution is currently available.
+This incident will remain open until the Reels Feed has been:
+
+<br>
+
+1. Updated.
+2. Tested for supported feed behavior.
+3. Verified within the Reels Tab.
+4. Checked for compatibility with Profile Reels and other operational Reel components.
+5. Verified on both iOS and Android.
+
+<br>
+
+Profile Media, Reels Publishing, Reels Interactions, Reels Discovery, and Reels Creator Tools do not require restoration because they are currently operational.
+
+<br>
+
+No estimated completion time is currently available.
