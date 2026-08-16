@@ -1,10 +1,10 @@
 ---
 title: "Reels Tab and Profile Reels Partial Outage"
-date: "2026-08-15 17:25:00"
-resolved: false
+date: "2026-08-15 21:10:51"
+resolved: true
 severity: "disrupted"
 componentStatus: "partial_outage"
-incidentStatus: "identified"
+incidentStatus: "resolved"
 affected:
   - "Reels Tab"
   - "Profile Reels"
@@ -50,7 +50,7 @@ The primary limitation is that the underlying online services and cross-device w
 
 ### Status
 
-The missing infrastructure and workflow requirements have been identified.
+The missing infrastructure and workflow requirements have been resolved.
 
 Development remains active across profile media, Reel publishing, interactions, discovery, and creator tools. The incident will remain open until the required connected functionality is implemented, integrated, and verified across both the Reels Tab and Profile Reels experiences.
 
